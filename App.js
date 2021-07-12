@@ -8,14 +8,17 @@
 
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-
 import {Navigator} from './src/routes';
+import {Provider} from 'react-redux';
+import {store} from './src/redux';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Navigator />
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={styles.container}>
+        <Navigator />
+      </SafeAreaView>
+    </Provider>
   );
 };
 
