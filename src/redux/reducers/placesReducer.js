@@ -10,6 +10,7 @@ const placesReducer = (state = initialState, action) => {
       const newPlaces = {
         id: new Date().toString(),
         title: action.data.title,
+        image: action.data.image,
       };
       return {...state, places: [...state.places, newPlaces]};
   }

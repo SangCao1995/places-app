@@ -20,7 +20,7 @@ export const PlacesListScreen = props => {
         keyExtractor={item => item.id}
         renderItem={({item}) => (
           <PlaceItem
-            image={null}
+            image={item.image}
             address={null}
             title={item.title}
             onPress={() =>
